@@ -1,16 +1,78 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #E5E5E5;
+   
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+
+@font-face {
+    font-family: "iranSans";
+    src: url("../public/fonts/desktop/IRANSans(FaNum).ttf");
+}
+  
+@font-face {
+    font-family: "iranSansBlack";
+    src: url("../public/fonts/desktop/IRANSans(FaNum)_Black.ttf");
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+    font-family: "iranSansBold";
+    src: url("../public/fonts/desktop/IRANSans(FaNum)_Bold.ttf");
+}
+@font-face {
+    font-family: "iranSansLight";
+    src: url("../public/fonts/desktop/IRANSans(FaNum)_Light.ttf");
+}
+@font-face {
+    font-family: "iranSansMedium";
+    src: url("../public/fonts/desktop/IRANSans(FaNum)_Medium.ttf");
+}
+@font-face {
+    font-family: "iranSansUltraLight";
+    src: url("../public/fonts/desktop/IRANSans(FaNum)_UltraLight.ttf");
+}
+
+/* Import Fonts/Mobile */
+
+@font-face {
+    font-family: "iranSansMobile";
+    src: url("../public/fonts/mobile/IRANSansMobile(FaNum).ttf");
+}
+@font-face {
+    font-family: "iranSansMobileBlack";
+    src: url("../public/fonts/mobile/IRANSansMobile(FaNum)_Black.ttf");
+}
+@font-face {
+    font-family: "iranSansMobileBold";
+    src: url("../public/fonts/mobile/IRANSansMobile(FaNum)_Bold.ttf");
+}
+@font-face {
+    font-family: "iranSansMobileLight";
+    src: url("../public/fonts/mobile/IRANSansMobile(FaNum)_Light.ttf");
+}
+@font-face {
+    font-family: "iranSansMobileMedium";
+    src: url("../public/fonts/mobile/IRANSansMobile(FaNum)_Medium.ttf");
+}
+@font-face {
+    font-family: "iranSansMobileUltraLight";
+    src: url("../public/fonts/mobile/IRANSansMobile(FaNum)_UltraLight.ttf");
+}
+
+/* Shabnam */
+@font-face {
+    font-family: "Shabnam";
+    src: url("../public/fonts/shabnam/Shabnam.ttf");
+}
+@font-face {
+    font-family: "Shabnam-Light";
+    src: url("../public/fonts/shabnam/Shabnam-Light.ttf");
+}
+@font-face {
+    font-family: "Shabnam-Bold";
+    src: url("../public/fonts/shabnam/Shabnam-Bold.ttf");
 }
