@@ -90,6 +90,7 @@ export default function Home() {
 
   return (
     <>
+      
       <div dir="rtl" className="h-screen flex justify-center items-center relative">
         <div className="bg-white w-[90vw] h-[60vh] md:w-[70vw] md:h-[50vh] lg:w-[32vw] lg:h-[59vh] mx-auto my-auto rounded-lg shadow-lg">
           <form
