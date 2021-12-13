@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Cookies from "js-cookie";
 import { useState, useEffect,useContext } from "react";
 import { useRouter } from "next/router";
 
@@ -56,7 +55,7 @@ const Dashboard = () => {
                             <button className="bg-black text-white px-8 rounded-md">افزودن محصول</button>
                         </div>
                         <div className="flex flex-col rounded-b-md overflow-hidden">
-                            <div className="flex w-full text-[#B4C2D8] rounded-t-md border-b  bg-white py-5 px-10 items-center">
+                            <div className="flex w-full text-[rgb(180,194,216)] rounded-t-md border-b  bg-white py-5 px-10 items-center">
                                 <div className="w-[9%]">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_419_33)">

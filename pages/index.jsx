@@ -10,6 +10,7 @@ export default function Home() {
   const router = useRouter();
 
   const [userData, setUserData] = useContext(UserDataContext);
+  
   const [emailborder, setEmailBorder] = useState("border-black");
   const [passwordborder, setPasswordBorder] = useState("border-black");
   const [emailErrorMessage, setEmailMessageText] = useState("");
