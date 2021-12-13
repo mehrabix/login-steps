@@ -132,7 +132,7 @@ export default function Home() {
                 <p className="text-xs md:text-sm">رمز عبور خود را فراموش کرده اید؟</p>
 
                 <div className="text-[#007BFF] font-ShabnamBold text-xs md:text-sm mr-1">
-                  <Link className="" href="/forget">
+                  <Link href="#" className="" href="/forget">
                     بازیابی رمز عبور
                   </Link>
                 </div>

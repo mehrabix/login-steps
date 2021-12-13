@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-const dashboard = () => {
+const Dashboard = () => {
 
     const productData = [
         {
@@ -178,4 +178,4 @@ const dashboard = () => {
             </>
     );
 }
-export default dashboard;
+export default Dashboard;
