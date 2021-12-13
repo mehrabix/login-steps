@@ -1,48 +1,15 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+import { UserDataContext } from "../components/UserDataProvider";
 
 
 export default function Home() {
+
   const router = useRouter();
 
-
-  const userData = [
-    {
-      id: 1,
-      email: "test1@google.com",
-      password: "123",
-    },
-    {
-      id: 2,
-      email: "test2@google.com",
-      password: "1234",
-    },
-    {
-      id: 3,
-      email: "test3@google.com",
-      password: "12345",
-    },
-    {
-      id: 4,
-      email: "test4@google.com",
-      password: "123456",
-    },
-    {
-      id: 5,
-      email: "test5@google.com",
-      password: "1234567",
-    },
-  ];
-
-  useEffect(() => {
-    Cookies.set("userData", JSON.stringify(userData));
-    setUserDataApi(JSON.parse(Cookies.get("userData")));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const [userDataApi, setUserDataApi] = useState([]);
+  const [userData, setUserData] = useContext(UserDataContext);
   const [emailborder, setEmailBorder] = useState("border-black");
   const [passwordborder, setPasswordBorder] = useState("border-black");
   const [emailErrorMessage, setEmailMessageText] = useState("");
@@ -65,7 +32,7 @@ export default function Home() {
     }
     if (email !== "" && password !== "")
     {
-      const user = userDataApi.find(
+      const user = userData.find(
         (user) => user.email === email && user.password === password
       );
       if (user) {
