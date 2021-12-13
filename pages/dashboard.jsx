@@ -48,7 +48,7 @@ const Dashboard = () => {
         Cookies.set("productData", JSON.stringify(productData));
         setProductDataApi(JSON.parse(Cookies.get("productData")));
 
-    }, []);
+    }, [productData]);
 
     const [productDataApi, setProductDataApi] = useState([]);
 

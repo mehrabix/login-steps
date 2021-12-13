@@ -40,7 +40,7 @@ export default function Home() {
     Cookies.set("userData", JSON.stringify(userData));
     setUserDataApi(JSON.parse(Cookies.get("userData")));
 
-  }, []);
+  }, [userData]);
 
   const [userDataApi, setUserDataApi] = useState([]);
   const [emailborder, setEmailBorder] = useState("border-black");
