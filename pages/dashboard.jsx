@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { useContext,useState } from "react";
+import { useContext, useState } from "react";
+import ModalFrame from "../components/Modals/ModalFrame";
 import EditProduct from "../components/Modals/EditProduct";
-
-
 import { UserProductDataContext } from "../components/UserProductDataProvider";
 
 
@@ -18,11 +17,17 @@ const Dashboard = () => {
     const handleEditProduct = () => {
         setShowEditModal(true)
     }
+    const handleOnClickAround = () => {
+        setShowEditModal(false)
+    }
+
 
     return (
         <>
             
-            <EditProduct  showModal={showEditModal} />
+            <ModalFrame onClick={() => handleOnClickAround()} showModal={showEditModal} >
+                <EditProduct />
+            </ModalFrame>
             <div dir="rtl" className="flex w-full font-Shabnam text-right ">
               
                 <div className="w-[18%] bg-white h-screen p-4">

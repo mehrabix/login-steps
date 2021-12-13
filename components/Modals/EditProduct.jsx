@@ -1,8 +1,8 @@
 
 const EditProduct = (props) => { 
     return (
-        <div  dir="rtl" className={`${props.showModal == true ? "h-screen w-screen" : "h-0 w-0 overflow-hidden"} absolute font-Shabnam  flex justify-center items-center bg-[#000000b9] `}>
-            <div className="flex flex-col w-[35%] h-[43vh] rounded-lg overflow-hidden">
+        
+            <div className="flex flex-col w-[35%] h-[43vh] rounded-lg overflow-hidden cursor-default ">
                 <div className="bg-white w-full h-[15%] px-12 flex items-center border-b-2 text-lg">ویرایش محصول</div>
                 <div className="bg-white w-full h-[87%] px-12 flex gap-y-4 flex-col items-center justify-center">
                     <div className="flex flex-col gap-y-2 w-full">
@@ -20,7 +20,7 @@ const EditProduct = (props) => {
                     
                 </div>
             </div>
-        </div>
+        
     )
 }
 
