@@ -1,56 +1,16 @@
 import Link from "next/link";
 import Cookies from "js-cookie";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import { useRouter } from "next/router";
+
+import { UserProductDataContext } from "../components/UserProductDataProvider";
+
 
 const Dashboard = () => {
 
-    const productData = [
-        {
-            id: 1,
-            name: "گوشی موبایل Iphone 13 Pro Max",
-            price: "40000000 تومان",
-            group: "پل",
-            releaseDate: "21 تیر ۱۴۰۰",
-        },
-        {
-            id: 2,
-            name: "گوشی موبایل Iphone 13 A2634",
-            price: "28500000 تومان",
-            group: "پل",
-            releaseDate: "21 تیر ۱۴۰۰",
-        },
-        {
-            id: 3,
-            name: "گوشی موبایل Iphone 13 ۲۰۲۰",
-            price: "45000400 تومان",
-            group: "پل",
-            releaseDate: "21 تیر ۱۴۰۰",
-        },
-        {
-            id: 4,
-            name: "گوشی موبایل هواوی ۲۵۶۶",
-            price: "82520000 تومان",
-            group: "هواوی",
-            releaseDate: "21 تیر ۱۴۰۰",
-        },
-        {
-            id: 5,
-            name: "گوشی موبایل هواوی ۱۸۵۲۲",
-            price: "40000000 تومان",
-            group: "هواوی",
-            releaseDate: "21 تیر ۱۴۰۰",
-        },
-    ];
+ 
 
-
-    useEffect(() => {
-      Cookies.set("productData", JSON.stringify(productData));
-      setProductDataApi(JSON.parse(Cookies.get("productData")));
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    const [productDataApi, setProductDataApi] = useState([]);
+    const [productData, setProductData] = useContext(UserProductDataContext)
 
 
 
@@ -116,7 +76,7 @@ const Dashboard = () => {
                                 <div className="w-[19%]">تاریخ انتشار</div>
                             </div>
                             {
-                                productDataApi.map((item,index) => {
+                                productData.map((item,index) => {
                                     return (
                                         <>
                                             <div key={item.id} className={`flex w-full group py-5 pr-28 items-center  ${

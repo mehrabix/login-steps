@@ -1,10 +1,14 @@
 import '../styles/globals.css'
-import {UserDataProvider} from "../components/UserDataProvider"
+import { UserDataProvider } from "../components/UserDataProvider"
+import { UserProductDataProvider } from "../components/UserProductDataProvider";
+
 
 function MyApp({ Component, pageProps }) {
   return (
     <UserDataProvider>
-      <Component {...pageProps} />
+      <UserProductDataProvider>
+        <Component {...pageProps} />
+      </UserProductDataProvider>
     </UserDataProvider>
   );
 }
