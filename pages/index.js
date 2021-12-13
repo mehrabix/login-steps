@@ -39,7 +39,7 @@ export default function Home() {
   useEffect(() => {
     Cookies.set("userData", JSON.stringify(userData));
     setUserDataApi(JSON.parse(Cookies.get("userData")));
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   const [userDataApi, setUserDataApi] = useState([]);

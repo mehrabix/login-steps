@@ -45,9 +45,9 @@ const Dashboard = () => {
 
 
     useEffect(() => {
-        Cookies.set("productData", JSON.stringify(productData));
-        setProductDataApi(JSON.parse(Cookies.get("productData")));
-
+      Cookies.set("productData", JSON.stringify(productData));
+      setProductDataApi(JSON.parse(Cookies.get("productData")));
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [productData]);
 
     const [productDataApi, setProductDataApi] = useState([]);
